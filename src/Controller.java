@@ -236,14 +236,15 @@ public class Controller {
         rungeKuttaMaxErrorSeries.getData().clear();
 
         Function.recalculateConstant(x0, y0);
-        double originalValue = Function.calculateFunction(X);
+        double originalValue;
 
         for (int N = Nmin; N <= Nmax; N++) {
-            temp = Math.abs(originalValue - (double) eulersMethod.solve(x0, X, y0, N).getData().get(N-1).getYValue());
+            originalValue = Function.calculateFunction(X);
+            temp = Math.abs(originalValue - (double) eulersMethod.solve(x0, X, y0, N).getData().get(N).getYValue());
             eulersMaxErrorSeries.getData().add(new XYChart.Data<>(N, temp));
-            temp = Math.abs(originalValue - (double) improvedEulersMethod.solve(x0, X, y0, N).getData().get(N-1).getYValue());
+            temp = Math.abs(originalValue - (double) improvedEulersMethod.solve(x0, X, y0, N).getData().get(N).getYValue());
             improvedEulersMaxErrorSeries.getData().add(new XYChart.Data<>(N, temp));
-            temp = Math.abs(originalValue - (double) rungeKuttaMethod.solve(x0, X, y0, N).getData().get(N-1).getYValue());
+            temp = Math.abs(originalValue - (double) rungeKuttaMethod.solve(x0, X, y0, N).getData().get(N).getYValue());
             rungeKuttaMaxErrorSeries.getData().add(new XYChart.Data<>(N, temp));
         }
     }

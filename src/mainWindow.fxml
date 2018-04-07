@@ -69,7 +69,7 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="N" layoutX="300.0" layoutY="497.0" prefHeight="51.0" prefWidth="74.0" text="10">
+                  <TextField fx:id="N" layoutX="300.0" layoutY="497.0" prefHeight="51.0" prefWidth="74.0" text="15">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -127,7 +127,7 @@
                               <Font size="18.0" />
                           </font>
                       </TextField>
-                      <TextField fx:id="Nmin" layoutX="363.0" layoutY="534.0" prefHeight="51.0" prefWidth="74.0" text="10">
+                      <TextField fx:id="Nmin" layoutX="363.0" layoutY="534.0" prefHeight="51.0" prefWidth="74.0" text="15">
                           <font>
                               <Font size="18.0" />
                           </font>
